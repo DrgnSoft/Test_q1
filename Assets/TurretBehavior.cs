@@ -25,6 +25,8 @@ public class TurretBehavior : MonoBehaviour {
         if( player != null )
         {
             // distance from the player
+            // changed it from the spec slightly, since if the player is too close to the turret and/or directly above/below, 
+            // it's pretty much impossible to dodge a shot
             float dist = transform.position.x - player.transform.position.x;
 
             // check shoot conditions
